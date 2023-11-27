@@ -1,28 +1,23 @@
-function calculateService(event) {
-    calculateService.preventDefault();
+function service(event) {
+    event.preventDefault();
 
-    let typeOfWork= document.getElementById("typeOfWork");
-    let optionWork= typeOfWork.options[typeOfWork.selectedIndex].value;
+    let typeOfWork = document.getElementById("typeOfWork").value;
 
-    let time= document.getElementById("hours").value;
-    time= parseInt(time);
+    let time = document.getElementById("hours").value;
+    time = parseInt(time);
 
-    let discountCode= document.getElementById("discountCode").value;
+    let discountCode = document.getElementById("discountCode").value;
 
-    if (optionService == "Backend") {
-        let price = time * 20.50
-        console.log(price);
+    let price;
 
-    } 
-
-    else if (optionService == "Frontend") {
-        let price = time * 15.30
-        console.log(price);
-
-    } 
-
-    else if (optionService == "Projectanalysis") {
-        let price = time * 33.60
-        console.log(price);
+    if (typeOfWork == "Backend") {
+        price = time * 20.50;
+    }  else if (typeOfWork == "Frontend") {
+        price = time * 15.30;
+    }  else if (typeOfWork == "Projectanalysis") {
+        price = time * 33.60;
     }
+
+    console.log(price);
+    
 }
