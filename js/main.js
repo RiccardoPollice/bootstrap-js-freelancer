@@ -16,10 +16,11 @@ function service(event) {
         }
     }
     let price;
+    
      if (discountValid) {
 
         if (typeOfWork == "Backend") {
-            price = time * 20.50 *0.75;
+            price = time * 20.50 * 0.75;
             price = price.toFixed(2);
             console.log(price);
             document.getElementById("finalPrice").innerHTML= price
@@ -41,7 +42,7 @@ function service(event) {
     else {
         alert ("Codice sconto non valido")
         if (typeOfWork == "Backend") {
-            price = time *20.50;
+            price = time * 20.50;
             price = price.toFixed(2);
             console.log(price);
             document.getElementById("finalPrice").innerHTML= price
