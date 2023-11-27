@@ -15,36 +15,48 @@ function service(event) {
             break;
         }
     }
+    let price;
      if (discountValid) {
+
         if (typeOfWork == "Backend") {
-            let price = time * 20.50 *0.75;
+            price = time * 20.50 *0.75;
             price = price.toFixed(2);
             console.log(price);
+            document.getElementById("finalPrice").innerHTML= price
+           
         }
         else if (typeOfWork == "Frontend") {
-            let price = time * 15.30 * 0.75;
+            price = time * 15.30 * 0.75;
             price = price.toFixed(2);
             console.log(price);
+            document.getElementById("finalPrice").innerHTML= price
         }
         else if (typeOfWork == "Projectanlaysis") {
-            let price = time * 15.30 * 0.75;
+            price = time * 15.30 * 0.75;
             price = price.toFixed(2);
             console.log(price);
+            document.getElementById("finalPrice").innerHTML= price
         };
     }
     else {
         alert ("Codice sconto non valido")
         if (typeOfWork == "Backend") {
-            let price = time *20.50;
+            price = time *20.50;
+            price = price.toFixed(2);
             console.log(price);
+            document.getElementById("finalPrice").innerHTML= price
         }
         else if (typeOfWork == "Frontend") {
-            let price = time * 15.30;
+            price = time * 15.30;
+            price = price.toFixed(2);
             console.log(price);
+            document.getElementById("finalPrice").innerHTML= price
         }
         else if (typeOfWork == "PProjectanlaysis") {
-            let price = time * 33.60;
+            price = time * 33.60;
+            price = price.toFixed(2);
             console.log(price);
+            document.getElementById("finalPrice").innerHTML= price
         }
     }
 
